@@ -1,0 +1,194 @@
+/* Container & basic layout */
+.about-container {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffe5e5, #ffd6d6, #ffc2c2);
+  padding: 2rem;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Truck animation */
+.truck-wrapper {
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.truck-icon {
+  width: 64px;
+  height: 64px;
+  color: #b71c1c;
+  animation: truck-move 15s linear infinite;
+}
+@keyframes truck-move {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(calc(100vw + 100%));
+  }
+}
+
+/* Header */
+.about-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.about-header h1 {
+  font-size: 3rem;
+  color: #b71c1c;
+  margin-bottom: 0.5rem;
+}
+.header-underline {
+  width: 80px;
+  height: 4px;
+  background-color: #b71c1c;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+}
+
+/* Icon Animations (only for Features section) */
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+.bounce-animation {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  background: #fff;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  font-size: 2.5rem;
+  color: #b71c1c;
+  margin-bottom: 2rem;
+}
+
+.benefits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.benefit-card {
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.red-bg {
+  background-color: #b71c1c;
+}
+.red-light-bg {
+  background-color: #f28b82;
+}
+.red-medium-bg {
+  background-color: #e57373;
+}
+
+.benefit-icon {
+  width: 40px;
+  height: 40px;
+  color: #fff; /* static, no animation */
+}
+
+/* Typography */
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #b71c1c;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .features,
+  .benefits-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .truck-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .benefit-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
