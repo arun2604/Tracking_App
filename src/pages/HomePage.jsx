@@ -51,6 +51,7 @@ function HomePage() {
   return (
     <div className="container">
       <div className="inner-container">
+        {/* Track Section */}
         <div className="card">
           <h1 className="heading-1">Track Your Order</h1>
 
@@ -112,6 +113,7 @@ function HomePage() {
             <h3 className="heading-2" style={{ fontSize: "18px" }}>
               Tracking History
             </h3>
+
             {trackingDetails.history.map((event, i) => (
               <div className="timeline-row" key={i}>
                 <div>
@@ -126,6 +128,7 @@ function HomePage() {
                     <div className="timeline-line"></div>
                   )}
                 </div>
+
                 <div style={{ paddingBottom: "16px" }}>
                   <p>{event.date}</p>
                   <p>
@@ -138,50 +141,46 @@ function HomePage() {
           </div>
         )}
 
-        {/* Images Section */}
-        <h2 className="heading-1" style={{ textAlign: "center" }}>
-          We Deliver Everything You Need
+        {/* Vision & Mission Section */}
+        <h2 className="heading-1 vision-title" style={{ textAlign: "center" }}>
+          Our Vision & Mission
         </h2>
 
-        <div className="grid">
-          <div className="image-card">
-            <img
-              src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=400"
-              alt=""
-            />
-            <div className="image-overlay">
-              <p className="image-text">T-Shirts</p>
-            </div>
+        <div className="vision-mission-container">
+          <div className="vm-card">
+            <h3 className="vm-heading">Our Vision</h3>
+            <p className="vm-text">
+              To become a trusted and leading delivery partner known for speed,
+              reliability, and customer-friendly service. We aim to create a
+              seamless delivery experience where every shipment can be tracked,
+              trusted, and delivered with care.
+            </p>
           </div>
 
-          <div className="image-card">
-            <img
-              src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400"
-              alt=""
-            />
-            <div className="image-overlay">
-              <p className="image-text">Footwear</p>
-            </div>
-          </div>
-
-          <div className="image-card">
-            <img
-              src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400"
-              alt=""
-            />
-            <div className="image-overlay">
-              <p className="image-text">Jeans</p>
-            </div>
-          </div>
-
-          <div className="image-card">
-            <img
-              src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=400"
-              alt=""
-            />
-            <div className="image-overlay">
-              <p className="image-text">Jackets</p>
-            </div>
+          <div className="vm-card">
+            <h3 className="vm-heading">Our Mission</h3>
+            <ul className="vm-list">
+              <li>
+                To provide fast, safe, and professional delivery services for
+                courier companies and business partners.
+              </li>
+              <li>
+                To maintain complete transparency through our easy-to-use
+                shipment tracking system.
+              </li>
+              <li>
+                To deliver every parcel with commitment, accuracy, and respect
+                for customer time.
+              </li>
+              <li>
+                To build long-term relationships by offering reliable service
+                and friendly support.
+              </li>
+              <li>
+                To continuously improve operations with better technology and
+                trained staff.
+              </li>
+            </ul>
           </div>
         </div>
       </div>
